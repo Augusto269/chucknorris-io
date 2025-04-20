@@ -3,6 +3,7 @@
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import SearchIcon from "@mui/icons-material/Search";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -16,7 +17,10 @@ export default function BottomNav() {
   }, [pathname]);
 
   return (
-    <Paper className="fixed bottom-0 left-0 right-0" elevation={3}>
+    <Paper
+      elevation={6}
+      className="bottom-0 left-0 right-0 w-full z-50 border-t bg-white"
+    >
       <BottomNavigation
         showLabels
         value={value}
@@ -24,9 +28,23 @@ export default function BottomNav() {
           setValue(newValue);
           router.push(newValue);
         }}
+        className="w-full"
       >
-        <BottomNavigationAction label="Home" value="/" icon={<HomeIcon />} />
-        <BottomNavigationAction label="Favorites" value="/favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction
+          label="Home"
+          value="/"
+          icon={<HomeIcon />}
+        />
+        <BottomNavigationAction
+          label="Favorites"
+          value="/favorites"
+          icon={<FavoriteIcon />}
+        />
+        <BottomNavigationAction
+          label="Search"
+          value="/search"
+          icon={<SearchIcon />}
+        />
       </BottomNavigation>
     </Paper>
   );
