@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥋 Chuck Norris Jokes App
 
-## Getting Started
+A simple Next.js app that fetches random Chuck Norris jokes from [api.chucknorris.io](https://api.chucknorris.io). Users can favorite, rate, and manage their own collection of jokes – all stored locally.
 
-First, run the development server:
+---
+
+## 📸 Features
+
+-   🤣 Fetch a random Chuck Norris joke
+-   ⭐ Favorite jokes and view your collection
+-   🔥 Rate jokes from 1 to 5 stars
+-   🧹 Remove/unfavorite jokes
+-   📊 Sort your favorites by rating
+-   💾 Data persisted using LocalStorage
+-   🎨 Styled with [Tailwind CSS](https://tailwindcss.com/) or [Material UI](https://mui.com/) (depending on implementation)
+
+---
+
+## 🚀 Tech Stack
+
+-   [Next.js](https://nextjs.org/) (with TypeScript)
+-   [Tailwind CSS](https://tailwindcss.com/) **or** [Material UI](https://mui.com/)
+-   [Chuck Norris API](https://api.chucknorris.io/)
+-   LocalStorage for client-side persistence
+
+---
+
+## 🛠 Setup Instructions
+
+### 1. Clone the repository
+
+````bash
+git clone https://github.com/your-username/chuck-norris-jokes.git
+cd chuck-norris-jokes
+
+
+### 2. Install dependencies
+
+```bash
+npm install
+````
+
+### 3. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Open your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to `http://localhost:3000` to view the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+````
+### 5. Build for production
 
-## Learn More
+```bash
+npm run build
+````
 
-To learn more about Next.js, take a look at the following resources:
+### 6. Start the production server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 💡 Implementation Notes
+	•	Jokes are fetched from https://api.chucknorris.io/jokes/random.
+	•	User favorites are stored in LocalStorage under a key like favorites.
+	•	Ratings are also saved locally and associated with joke IDs.
+	•	Sorting is client-side only.
+	•	The app is fully static – no backend or external DB.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Folder Structure:
+/src
+  /components    # Reusable UI components
+  /pages         # Next.js routes (index.tsx, favorites.tsx)
+  /styles        # Global or component styles (if Tailwind not used)
+  /utils         # LocalStorage handlers, helpers, etc.
