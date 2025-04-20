@@ -25,43 +25,48 @@ A simple Next.js app that fetches random Chuck Norris jokes from [api.chucknorri
 
 ---
 
-## 🛠 Setup Instructions
-
 ### 1. Clone the repository
-
-````bash
-git clone https://github.com/your-username/chuck-norris-jokes.git
-cd chuck-norris-jokes
-
+```bash
+git clone https://github.com/your-username/chucknorris-io.git  
+cd chucknorris-io
+```
 
 ### 2. Install dependencies
-
 ```bash
 npm install
-````
+```
 
 ### 3. Start the development server
-
 ```bash
 npm run dev
 ```
 
-### 4. Open your browser
+Then open: http://localhost:3000
 
-Navigate to `http://localhost:3000` to view the app.
-
-````
-### 5. Build for production
-
+### 4. Build for production
 ```bash
 npm run build
-````
+```
 
-### 6. Start the production server
-
+### 5. Start the production server
 ```bash
 npm start
 ```
+
+---
+
+## 🧪 Running Tests
+
+Run unit tests:
+```bash
+npm run test
+```
+Watch mode:
+```bash
+npm run test:watch
+```
+
+---
 
 ## 💡 Implementation Notes
 
@@ -74,8 +79,11 @@ npm start
 ## Folder Structure:
 
 /src
-/components # Reusable UI components
-/pages # Next.js routes (index.tsx, favorites.tsx)
-/styles # Global or component styles (if Tailwind not used)
-/utils # LocalStorage handlers, helpers, etc.
-/services # API service for fetching jokes
+  ├── app               # App directory for routing (Next.js 13+)
+  │   ├── page.tsx      # Home page
+  │   └── favorites      # Favorites page
+  ├── components        # Reusable UI components (e.g., JokeCard, BottomNav)
+  ├── services          # Joke API service
+  ├── styles            # Global CSS (if used)
+  ├── utils             # Helpers (e.g., rating, localStorage)
+    __tests__             # Unit tests
