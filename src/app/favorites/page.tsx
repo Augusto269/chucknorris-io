@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Joke } from "@/services/jokes.service";
+import { Joke } from "@/services/jokes.services";
 import JokeCard from "@/components/JokeCard";
 import BottomNav from "@/components/BottomNav";
 
