@@ -9,7 +9,7 @@ FROM node:18-alpine AS runner
 
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV development
 
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
@@ -20,4 +20,6 @@ RUN npm ci --omit=dev
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
+
+# CMD ["npm", "start"] Change for this when we move to pro
