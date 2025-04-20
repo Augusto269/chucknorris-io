@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { Joke } from '@/services/jokes.services';
 import { Card, CardContent, IconButton, Typography, Rating } from '@mui/material';
@@ -33,32 +33,32 @@ export default function JokeCard({ joke, isFavorite, onToggleFavorite }: Props) 
         <Card
             elevation={8}
             sx={{
-                m: 4,
-                borderRadius: 3,
-                boxShadow: 3,
-                bgcolor: 'white',
-                transition: 'box-shadow 0.2s ease-in-out',
+                'm': 4,
+                'borderRadius': 3,
+                'boxShadow': 3,
+                'bgcolor': 'white',
+                'transition': 'box-shadow 0.2s ease-in-out',
                 '&:hover': {
                     boxShadow: 6,
                 },
             }}
         >
-            <CardContent className="p-4">
-                <div className="flex justify-between items-start mb-4">
-                    <Typography variant="h6" className="text-gray-800 font-semibold">
+            <CardContent className='p-4'>
+                <div className='flex justify-between items-start mb-4'>
+                    <Typography variant='h6' className='text-gray-800 font-semibold'>
                         Chuck Norris Joke
                     </Typography>
-                    <IconButton onClick={onToggleFavorite} color="primary" aria-label="favorite">
+                    <IconButton onClick={onToggleFavorite} color='primary' aria-label='favorite'>
                         {isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                     </IconButton>
                 </div>
 
-                <Typography variant="body1" className="text-gray-700 mb-4 leading-relaxed">
+                <Typography variant='body1' className='text-gray-700 mb-4 leading-relaxed' data-testid='joke-text'>
                     {joke.value}
                 </Typography>
 
-                <div className="flex items-center gap-2">
-                    <Typography variant="body2" className="text-sm text-gray-600">
+                <div className='flex items-center gap-2'>
+                    <Typography variant='body2' className='text-sm text-gray-600'>
                         Rate this joke:
                     </Typography>
                     <Rating name={`joke-rating-${joke.id}`} value={rating} onChange={handleRatingChange} />

@@ -1,6 +1,7 @@
 import '../styles/global.css';
 import { Inter } from 'next/font/google';
 import MuiThemeProvider from '@/theme/MuiThemeProvider';
+import React from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 

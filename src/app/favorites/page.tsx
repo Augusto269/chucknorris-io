@@ -7,6 +7,7 @@ import BottomNav from "@/components/BottomNav";
 import { IconButton, Tooltip } from "@mui/material";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import React from 'react';
 
 export default function Favorites() {
   const [favorites, setFavorites] = useState<Joke[]>([]);

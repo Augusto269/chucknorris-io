@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import { useEffect, useState } from 'react';
 import jokesService, { Joke } from '@/services/jokes.services';
 import JokeCard from '@/components/JokeCard';
@@ -28,7 +28,6 @@ export default function Home() {
         const updated = isFav ? favorites.filter((favoriteJoke) => favoriteJoke.id !== joke.id) : [...favorites, joke];
 
         setFavorites(updated);
-        console.log('Updated favorites:', updated);
         localStorage.setItem('favorites', JSON.stringify(updated));
     };
 
