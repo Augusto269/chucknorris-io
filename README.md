@@ -76,3 +76,4 @@ npm start
   /pages         # Next.js routes (index.tsx, favorites.tsx)
   /styles        # Global or component styles (if Tailwind not used)
   /utils         # LocalStorage handlers, helpers, etc.
+  /services      # API service for fetching jokes
