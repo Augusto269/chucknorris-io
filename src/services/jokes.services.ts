@@ -1,4 +1,4 @@
-import api from "./api";
+import api from './api';
 
 export interface Joke {
   id: string;
@@ -11,7 +11,7 @@ export interface Joke {
 
 const jokesService = {
   getRandom: async (): Promise<Joke> => {
-    const res = await api.get<Joke>("/jokes/random");
+    const res = await api.get<Joke>('/jokes/random');
     return res.data;
   },
 
@@ -21,7 +21,7 @@ const jokesService = {
   },
 
   getCategories: async (): Promise<string[]> => {
-    const res = await api.get<string[]>("/jokes/categories");
+    const res = await api.get<string[]>('/jokes/categories');
     return res.data;
   },
 };

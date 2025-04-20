@@ -6,22 +6,22 @@ A simple Next.js app that fetches random Chuck Norris jokes from [api.chucknorri
 
 ## 📸 Features
 
--   🤣 Fetch a random Chuck Norris joke
--   ⭐ Favorite jokes and view your collection
--   🔥 Rate jokes from 1 to 5 stars
--   🧹 Remove/unfavorite jokes
--   📊 Sort your favorites by rating
--   💾 Data persisted using LocalStorage
--   🎨 Styled with [Tailwind CSS](https://tailwindcss.com/) or [Material UI](https://mui.com/) (depending on implementation)
+- 🤣 Fetch a random Chuck Norris joke
+- ⭐ Favorite jokes and view your collection
+- 🔥 Rate jokes from 1 to 5 stars
+- 🧹 Remove/unfavorite jokes
+- 📊 Sort your favorites by rating
+- 💾 Data persisted using LocalStorage
+- 🎨 Styled with [Tailwind CSS](https://tailwindcss.com/) or [Material UI](https://mui.com/) (depending on implementation)
 
 ---
 
 ## 🚀 Tech Stack
 
--   [Next.js](https://nextjs.org/) (with TypeScript)
--   [Tailwind CSS](https://tailwindcss.com/) **or** [Material UI](https://mui.com/)
--   [Chuck Norris API](https://api.chucknorris.io/)
--   LocalStorage for client-side persistence
+- [Next.js](https://nextjs.org/) (with TypeScript)
+- [Tailwind CSS](https://tailwindcss.com/) **or** [Material UI](https://mui.com/)
+- [Chuck Norris API](https://api.chucknorris.io/)
+- LocalStorage for client-side persistence
 
 ---
 
@@ -64,16 +64,18 @@ npm start
 ```
 
 ## 💡 Implementation Notes
-	•	Jokes are fetched from https://api.chucknorris.io/jokes/random.
-	•	User favorites are stored in LocalStorage under a key like favorites.
-	•	Ratings are also saved locally and associated with joke IDs.
-	•	Sorting is client-side only.
-	•	The app is fully static – no backend or external DB.
+
+    •	Jokes are fetched from https://api.chucknorris.io/jokes/random.
+    •	User favorites are stored in LocalStorage under a key like favorites.
+    •	Ratings are also saved locally and associated with joke IDs.
+    •	Sorting is client-side only.
+    •	The app is fully static – no backend or external DB.
 
 ## Folder Structure:
+
 /src
-  /components    # Reusable UI components
-  /pages         # Next.js routes (index.tsx, favorites.tsx)
-  /styles        # Global or component styles (if Tailwind not used)
-  /utils         # LocalStorage handlers, helpers, etc.
-  /services      # API service for fetching jokes
+/components # Reusable UI components
+/pages # Next.js routes (index.tsx, favorites.tsx)
+/styles # Global or component styles (if Tailwind not used)
+/utils # LocalStorage handlers, helpers, etc.
+/services # API service for fetching jokes
