@@ -3,7 +3,6 @@
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import SearchIcon from "@mui/icons-material/Search";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -39,11 +38,6 @@ export default function BottomNav() {
           label="Favorites"
           value="/favorites"
           icon={<FavoriteIcon />}
-        />
-        <BottomNavigationAction
-          label="Search"
-          value="/search"
-          icon={<SearchIcon />}
         />
       </BottomNavigation>
     </Paper>
